@@ -6,7 +6,7 @@ plugins {
     kotlin("plugin.serialization") version "1.9.23"
 }
 
-group = "com.nte.cryptalbot"
+group = "com.kyugito666.cryptalbot" // Diubah
 version = "1.0.0"
 
 repositories {
@@ -31,7 +31,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("com.nte.cryptalbot.MainKt")
+    mainClass.set("com.kyugito666.cryptalbot.MainKt") // Diubah
 }
 
 tasks.withType<KotlinCompile> {
@@ -41,7 +41,7 @@ tasks.withType<KotlinCompile> {
 // Task to create a fat JAR that includes all dependencies
 tasks.jar {
     manifest {
-        attributes["Main-Class"] = "com.nte.cryptalbot.MainKt"
+        attributes["Main-Class"] = "com.kyugito666.cryptalbot.MainKt" // Diubah
     }
     configurations.getByName("runtimeClasspath").forEach { file ->
         from(zipTree(file.absoluteFile))
